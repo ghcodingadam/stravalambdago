@@ -2,12 +2,12 @@ AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: Outputs the time
 Resources:
-  TimeFunction:
+  StraveFunction:
     Type: AWS::Serverless::Function
     Properties:
       Handler: newHandler
       Runtime: go1.x
-      CodeUri: ./
+      CodeUri: stravafunction
       Events:
         Type: Schedule
         Properties:
