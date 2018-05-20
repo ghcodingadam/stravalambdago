@@ -6,6 +6,7 @@ phases:
       - echo Build started on `date`
       - echo Compiling the Go code...
       - go build stravafunction.go
+      - aws cloudformation package --template-file samTemplate.yaml --s3-bucket codepipeline-ap-southeast-2-360285354545 --output-template-file outputSamTemplate.yaml
   post_build:
     commands:
       - echo Build completed on `date`
